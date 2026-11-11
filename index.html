@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b0912">
+
+  <title>Dumirror_Robo — Robot Face & Animation Gallery</title>
+
+  <meta name="description" content="Explore all 19 expressive robot faces and 10 animated GIFs from Dumirror_Robo, an open-source SSD1306 OLED robot face library.">
+
+  <meta property="og:title" content="Dumirror_Robo — Face & Animation Gallery">
+  <meta property="og:description" content="19 expressive faces. 10 animations. One little robot.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://raw.githubusercontent.com/VIDAKHOSHPEY22/Dumirror_Robo/main/images/animations/sneeze.gif">
+
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #0b0912;
+      --surface: #13111d;
+      --surface-hover: #1b1728;
+      --border: #29243a;
+      --purple: #a78bfa;
+      --purple-bright: #8b5cf6;
+      --text: #f4f0ff;
+      --muted: #a49bb8;
+      --radius: 18px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(ellipse at 50% -15%, #39245f 0%, transparent 45%),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    .container {
+      width: min(1160px, calc(100% - 40px));
+      margin: auto;
+    }
+
+    /* Header */
+
+    header {
+      padding: 64px 0 35px;
+      text-align: center;
+    }
+
+    .brand-icon {
+      width: 64px;
+      height: 64px;
+      margin: 0 auto 18px;
+      display: grid;
+      place-items: center;
+      border: 1px solid #55417d;
+      border-radius: 20px;
+      background: linear-gradient(145deg, #251b3d, #151020);
+      font-size: 34px;
+      box-shadow: 0 0 45px #8b5cf629;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2rem, 6vw, 3.5rem);
+      font-weight: 850;
+      letter-spacing: -2px;
+    }
+
+    h1 span {
+      color: var(--purple);
+    }
+
+    .subtitle {
+      max-width: 620px;
+      margin: 12px auto 24px;
+      color: var(--muted);
+      font-size: 1rem;
+    }
+
+    .links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .link-button {
+      padding: 9px 17px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: #171321;
+      color: #ddd2ff;
+      font-size: .9rem;
+      transition: .2s ease;
+    }
+
+    .link-button:hover {
+      border-color: var(--purple);
+      background: #251b38;
+      transform: translateY(-2px);
+    }
+
+    /* Hero animation */
+
+    .hero {
+      margin: 25px auto 55px;
+      padding: 24px;
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      align-items: center;
+      gap: 30px;
+      border: 1px solid #44335f;
+      border-radius: 24px;
+      background: linear-gradient(120deg, #211833, #15111f 75%);
+      overflow: hidden;
+    }
+
+    .hero-content {
+      padding: 10px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 12px;
+      color: var(--purple);
+      font-size: .75rem;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .hero h2 {
+      margin: 0 0 10px;
+      font-size: clamp(1.7rem, 4vw, 2.5rem);
+      line-height: 1.15;
+    }
+
+    .hero p {
+      color: var(--muted);
+      margin: 0 0 18px;
+    }
+
+    .hero-code {
+      display: inline-block;
+      padding: 9px 13px;
+      border: 1px solid #51416c;
+      border-radius: 9px;
+      background: #0d0a15;
+      color: #d9c9ff;
+      font-family: monospace;
+      font-size: .85rem;
+    }
+
+    .hero-image {
+      min-width: 0;
+      padding: 12px;
+      border: 1px solid #39304a;
+      border-radius: 17px;
+      background: #050508;
+    }
+
+    .hero-image img {
+      display: block;
+      width: 100%;
+      max-height: 260px;
+      object-fit: contain;
+      image-rendering: pixelated;
+    }
+
+    /* Statistics */
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-bottom: 50px;
+    }
+
+    .stat {
+      padding: 17px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: var(--surface);
+      text-align: center;
+    }
+
+    .stat strong {
+      display: block;
+      color: var(--purple);
+      font-size: 1.7rem;
+      font-weight: 850;
+    }
+
+    .stat span {
+      color: var(--muted);
+      font-size: .82rem;
+    }
+
+    /* Gallery heading */
+
+    .section-heading {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+
+    .section-heading h2 {
+      margin: 0;
+      font-size: 1.65rem;
+      letter-spacing: -.5px;
+    }
+
+    .section-heading p {
+      margin: 4px 0 0;
+      color: var(--muted);
+      font-size: .9rem;
+    }
+
+    /* Controls */
+
+    .controls {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 13px;
+      margin-bottom: 25px;
+    }
+
+    .tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tab {
+      padding: 9px 16px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: var(--surface);
+      color: var(--muted);
+      cursor: pointer;
+      transition: .2s ease;
+    }
+
+    .tab:hover,
+    .tab.active {
+      border-color: var(--purple-bright);
+      background: #382456;
+      color: white;
+    }
+
+    .search {
+      width: min(260px, 100%);
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      outline: none;
+      background: var(--surface);
+      color: white;
+    }
+
+    .search:focus {
+      border-color: var(--purple);
+    }
+
+    /* Gallery grid */
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+      gap: 17px;
+    }
+
+    .card {
+      min-width: 0;
+      padding: 12px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--surface);
+      transition: transform .2s ease, border-color .2s ease, background .2s ease;
+      animation: appear .35s ease both;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: #8061b7;
+      background: var(--surface-hover);
+    }
+
+    @keyframes appear {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .preview {
+      position: relative;
+      display: grid;
+      place-items: center;
+      aspect-ratio: 2 / 1;
+      overflow: hidden;
+      border: 1px solid #292631;
+      border-radius: 11px;
+      background:
+        radial-gradient(ellipse, #171421, #050508 75%);
+      cursor: zoom-in;
+    }
+
+    .preview img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      image-rendering: pixelated;
+    }
+
+    .type-label {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      padding: 3px 8px;
+      border: 1px solid #51416b;
+      border-radius: 999px;
+      background: #171121e8;
+      color: #d7c4ff;
+      font-size: .65rem;
+      font-weight: 700;
+      letter-spacing: .5px;
+    }
+
+    .card-info {
+      padding: 11px 3px 2px;
+    }
+
+    .card-name {
+      margin: 0 0 5px;
+      font-size: 1rem;
+      font-weight: 750;
+      text-transform: capitalize;
+    }
+
+    .card-code {
+      display: block;
+      overflow: hidden;
+      color: #a99cbd;
+      font-family: monospace;
+      font-size: .72rem;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .copy-button {
+      margin-top: 11px;
+      padding: 6px 10px;
+      border: 1px solid #393047;
+      border-radius: 8px;
+      background: #1a1525;
+      color: #cdbbfa;
+      font-size: .75rem;
+      cursor: pointer;
+      transition: .2s ease;
+    }
+
+    .copy-button:hover {
+      border-color: var(--purple);
+      background: #302044;
+    }
+
+    .empty {
+      grid-column: 1 / -1;
+      padding: 45px 15px;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    .error-image {
+      color: #fca5a5;
+      font-size: .8rem;
+    }
+
+    /* Modal */
+
+    .modal {
+      position: fixed;
+      inset: 0;
+      z-index: 10;
+      display: none;
+      place-items: center;
+      padding: 20px;
+      background: #000c;
+      backdrop-filter: blur(9px);
+    }
+
+    .modal.open {
+      display: grid;
+    }
+
+    .modal-content {
+      position: relative;
+      width: min(720px, 100%);
+      padding: 18px;
+      border: 1px solid #51416c;
+      border-radius: 20px;
+      background: #15111f;
+      box-shadow: 0 20px 80px #0009;
+    }
+
+    .modal img {
+      display: block;
+      width: 100%;
+      max-height: 65vh;
+      object-fit: contain;
+      border-radius: 12px;
+      background: #050508;
+      image-rendering: pixelated;
+    }
+
+    .modal-title {
+      margin: 13px 0 0;
+      color: var(--text);
+      font-weight: 750;
+      text-align: center;
+    }
+
+    .close {
+      position: absolute;
+      top: 9px;
+      right: 9px;
+      z-index: 1;
+      width: 36px;
+      height: 36px;
+      border: 1px solid #65527e;
+      border-radius: 50%;
+      background: #211832;
+      color: white;
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+
+    /* Footer */
+
+    footer {
+      margin-top: 75px;
+      padding: 30px 10px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: .85rem;
+      text-align: center;
+    }
+
+    footer a {
+      color: var(--purple);
+    }
+
+    footer p {
+      margin: 5px 0;
+    }
+
+    @media (max-width: 650px) {
+      header {
+        padding-top: 42px;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        padding: 16px;
+      }
+
+      .hero-image {
+        order: -1;
+      }
+
+      .stats {
+        gap: 8px;
+      }
+
+      .stat {
+        padding: 12px 5px;
+      }
+
+      .stat strong {
+        font-size: 1.4rem;
+      }
+
+      .grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+      }
+
+      .card {
+        padding: 8px;
+      }
+
+      .card-code {
+        font-size: .65rem;
+      }
+
+      .controls {
+        align-items: stretch;
+      }
+
+      .search {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 360px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="container">
+    <div class="brand-icon">🤖</div>
+
+    <h1>Dumirror<span>_Robo</span></h1>
+
+    <p class="subtitle">
+      A little robot with a lot of expressions.
+      Explore every face and animation in the open-source
+      SSD1306 OLED robot face library.
+    </p>
+
+    <div class="links">
+      <a class="link-button"
+         href="https://github.com/VIDAKHOSHPEY22/Dumirror_Robo"
+         target="_blank" rel="noopener">
+        GitHub Repository ↗
+      </a>
+
+      <a class="link-button"
+         href="https://github.com/VIDAKHOSHPEY22/Dumirror_Robo#readme"
+         target="_blank" rel="noopener">
+        Documentation ↗
+      </a>
+
+      <a class="link-button"
+         href="https://youtu.be/25PJctTHJlc"
+         target="_blank" rel="noopener">
+        Watch Demo ↗
+      </a>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- Featured Animation -->
+
+    <section class="hero">
+      <div class="hero-content">
+        <span class="eyebrow">Featured Animation</span>
+
+        <h2>ACHOO! 💨</h2>
+
+        <p>
+          Meet the little robot that can sneeze, blink,
+          smile, look around and express itself.
+          This is one of the animated sequences
+          included in Dumirror_Robo.
+        </p>
+
+        <code class="hero-code">
+          robo.playAnimation(ANIM_SNEEZE);
+        </code>
+      </div>
+
+      <div class="hero-image">
+        <img
+          src="images/animations/sneeze.gif"
+          alt="Dumirror robot sneeze animation"
+          fetchpriority="high">
+      </div>
+    </section>
+
+    <!-- Statistics -->
+
+    <section class="stats" aria-label="Library statistics">
+      <div class="stat">
+        <strong>19</strong>
+        <span>Static Faces</span>
+      </div>
+
+      <div class="stat">
+        <strong>10</strong>
+        <span>Animations</span>
+      </div>
+
+      <div class="stat">
+        <strong>128×64</strong>
+        <span>OLED Resolution</span>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+
+    <section id="gallery">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">Explore the Library</span>
+          <h2>Robot Gallery</h2>
+          <p>Every expression has its own personality.</p>
+        </div>
+      </div>
+
+      <div class="controls">
+        <div class="tabs" role="group" aria-label="Gallery filter">
+          <button class="tab active" data-filter="all">All</button>
+          <button class="tab" data-filter="animation">Animations</button>
+          <button class="tab" data-filter="face">Faces</button>
+        </div>
+
+        <input
+          class="search"
+          id="search"
+          type="search"
+          placeholder="Search faces and animations..."
+          aria-label="Search gallery">
+      </div>
+
+      <div class="grid" id="grid" aria-live="polite">
+        <div class="empty">Loading gallery...</div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Image Preview Modal -->
+
+  <div class="modal" id="modal" role="dialog"
+       aria-modal="true" aria-label="Image preview">
+    <div class="modal-content">
+      <button class="close" id="closeModal"
+              aria-label="Close preview">×</button>
+
+      <img id="modalImage" src="" alt="">
+      <p class="modal-title" id="modalTitle"></p>
+    </div>
+  </div>
+
+  <footer>
+    <p>
+      Made with ♡ by the
+      <a href="https://github.com/VIDAKHOSHPEY22">
+        Dumirror Team
+      </a>
+    </p>
+
+    <p>
+      An independent open-source project.
+      Not affiliated with Dasai.
+    </p>
+
+    <p>
+      <a href="https://github.com/VIDAKHOSHPEY22/Dumirror_Robo">
+        github.com/VIDAKHOSHPEY22/Dumirror_Robo
+      </a>
+    </p>
+  </footer>
+
+  <script>
+    (() => {
+      "use strict";
+
+      const RAW =
+        "https://raw.githubusercontent.com/VIDAKHOSHPEY22/Dumirror_Robo/main/";
+
+      const faces = [
+        "angry",
+        "chilly",
+        "cold",
+        "cry",
+        "dead",
+        "dizzy",
+        "hot",
+        "huh",
+        "kiss",
+        "laugh",
+        "lol",
+        "love",
+        "normal",
+        "pooker",
+        "sad",
+        "sleepy",
+        "touch",
+        "warm",
+        "wink"
+      ];
+
+      const animations = [
+        "sneeze",
+        "blink",
+        "chew",
+        "heartbeat",
+        "hiccup",
+        "look_left",
+        "look_right",
+        "sleep_breath",
+        "smile_big",
+        "wake_up"
+      ];
+
+      const grid = document.getElementById("grid");
+      const search = document.getElementById("search");
+      const tabs = document.querySelectorAll(".tab");
+
+      const modal = document.getElementById("modal");
+      const modalImage = document.getElementById("modalImage");
+      const modalTitle = document.getElementById("modalTitle");
+      const closeModal = document.getElementById("closeModal");
+
+      let currentFilter = "all";
+
+      const items = [
+        ...animations.map(name => ({
+          name,
+          type: "animation",
+          image: `images/animations/${name}.gif`,
+          code: `robo.playAnimation("${name}");`
+        })),
+
+        ...faces.map(name => ({
+          name,
+          type: "face",
+          image: `images/oled-128x64-${name}.png`,
+          code: `robo.showFaceByName("${name}");`
+        }))
+      ];
+
+      function escapeHTML(value) {
+        return String(value).replace(/[&<>"']/g, char => ({
+          "&": "&amp;",
+          "<": "&lt;",
+          ">": "&gt;",
+          '"': "&quot;",
+          "'": "&#39;"
+        })[char]);
+      }
+
+      function render() {
+        const query = search.value.trim().toLowerCase();
+
+        const filtered = items.filter(item => {
+          const matchesType =
+            currentFilter === "all" ||
+            item.type === currentFilter;
+
+          const matchesSearch =
+            item.name.toLowerCase().includes(query);
+
+          return matchesType && matchesSearch;
+        });
+
+        if (!filtered.length) {
+          grid.innerHTML =
+            '<div class="empty">No matching expressions found.</div>';
+          return;
+        }
+
+        grid.innerHTML = filtered.map((item, index) => {
+          const safeName = escapeHTML(item.name);
+          const safeImage = escapeHTML(item.image);
+          const safeCode = escapeHTML(item.code);
+
+          return `
+            <article class="card" style="animation-delay:${Math.min(index * 25, 300)}ms">
+              <div
+                class="preview"
+                data-preview="${safeImage}"
+                data-name="${safeName}"
+                tabindex="0"
+                role="button"
+                aria-label="Preview ${safeName}"
+              >
+                <img
+                  src="${safeImage}"
+                  alt="${safeName} ${item.type}"
+                  loading="lazy"
+                  decoding="async"
+                  onerror="this.style.display='none'; this.parentElement.insertAdjacentHTML('beforeend','<span class=&quot;error-image&quot;>Image unavailable</span>')"
+                >
+
+                <span class="type-label">
+                  ${item.type === "animation" ? "ANIMATION" : "FACE"}
+                </span>
+              </div>
+
+              <div class="card-info">
+                <h3 class="card-name">${safeName.replaceAll("_", " ")}</h3>
+
+                <code class="card-code">${safeCode}</code>
+
+                <button
+                  class="copy-button"
+                  data-copy="${safeCode}"
+                  type="button"
+                >
+                  Copy code
+                </button>
+              </div>
+            </article>
+          `;
+        }).join("");
+      }
+
+      function openPreview(src, name) {
+        modalImage.src = src;
+        modalImage.alt = name;
+        modalTitle.textContent = name.replaceAll("_", " ");
+        modal.classList.add("open");
+        closeModal.focus();
+      }
+
+      function hidePreview() {
+        modal.classList.remove("open");
+        modalImage.src = "";
+      }
+
+      tabs.forEach(tab => {
+        tab.addEventListener("click", () => {
+          tabs.forEach(button => button.classList.remove("active"));
+
+          tab.classList.add("active");
+          currentFilter = tab.dataset.filter;
+
+          render();
+        });
+      });
+
+      search.addEventListener("input", render);
+
+      grid.addEventListener("click", async event => {
+        const copyButton = event.target.closest("[data-copy]");
+
+        if (copyButton) {
+          try {
+            await navigator.clipboard.writeText(
+              copyButton.dataset.copy
+            );
+
+            const original = copyButton.textContent;
+            copyButton.textContent = "Copied!";
+
+            setTimeout(() => {
+              copyButton.textContent = original;
+            }, 1200);
+          } catch {
+            copyButton.textContent = "Copy unavailable";
+          }
+
+          return;
+        }
+
+        const preview = event.target.closest("[data-preview]");
+
+        if (preview) {
+          openPreview(
+            preview.dataset.preview,
+            preview.dataset.name
+          );
+        }
+      });
+
+      grid.addEventListener("keydown", event => {
+        if (
+          (event.key === "Enter" || event.key === " ") &&
+          event.target.matches("[data-preview]")
+        ) {
+          event.preventDefault();
+
+          openPreview(
+            event.target.dataset.preview,
+            event.target.dataset.name
+          );
+        }
+      });
+
+      closeModal.addEventListener("click", hidePreview);
+
+      modal.addEventListener("click", event => {
+        if (event.target === modal) {
+          hidePreview();
+        }
+      });
+
+      document.addEventListener("keydown", event => {
+        if (event.key === "Escape") {
+          hidePreview();
+        }
+      });
+
+      render();
+    })();
+  </script>
+
+</body>
+</html>

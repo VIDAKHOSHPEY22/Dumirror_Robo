@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 470" width="860" height="470" font-family="Arial, Helvetica, sans-serif" font-size="14">
+<rect width="860" height="470" fill="#ffffff"/>
+<text x="430" y="28" text-anchor="middle" font-size="18" font-weight="bold">Wiring: ESP32-S3 + SSD1306 OLED + TTP223 (TouchPet default pins)</text>
+<rect x="30" y="60" width="230" height="280" rx="10" fill="#e8f1ff" stroke="#2b4c8c" stroke-width="2"/>
+<text x="145" y="86" text-anchor="middle" font-weight="bold">ESP32-S3 dev board (3.3 V logic)</text>
+<rect x="600" y="60" width="230" height="150" rx="10" fill="#222" stroke="#000" stroke-width="2"/>
+<rect x="680" y="108" width="140" height="90" fill="#0a2a4a" stroke="#6aa"/>
+<text x="715" y="82" text-anchor="middle" fill="#fff" font-weight="bold">SSD1306 128x64 OLED (I2C 0x3C)</text>
+<text x="750" y="158" text-anchor="middle" fill="#9fd">Dumirror face</text>
+<rect x="600" y="250" width="230" height="110" rx="10" fill="#f4e9c8" stroke="#8a6d1b" stroke-width="2"/>
+<text x="715" y="274" text-anchor="middle" font-weight="bold">TTP223 touch module</text>
+<circle cx="260" cy="110" r="5" fill="#d62728"/>
+<text x="250" y="114" text-anchor="end">3V3</text>
+<polyline points="260,110 330,110 330,124 600,124" fill="none" stroke="#d62728" stroke-width="3"/>
+<circle cx="600" cy="124" r="5" fill="#d62728"/>
+<text x="612" y="128" fill="#fff">VCC</text>
+<circle cx="260" cy="148" r="5" fill="#111111"/>
+<text x="250" y="152" text-anchor="end">GND</text>
+<polyline points="260,148 370,148 370,100 600,100" fill="none" stroke="#111111" stroke-width="3"/>
+<circle cx="600" cy="100" r="5" fill="#111111"/>
+<text x="612" y="104" fill="#fff">GND</text>
+<circle cx="260" cy="186" r="5" fill="#ff7f0e"/>
+<text x="250" y="190" text-anchor="end">GPIO 9 (SCL)</text>
+<polyline points="260,186 410,186 410,148 600,148" fill="none" stroke="#ff7f0e" stroke-width="3"/>
+<circle cx="600" cy="148" r="5" fill="#ff7f0e"/>
+<text x="612" y="152" fill="#fff">SCL</text>
+<circle cx="260" cy="224" r="5" fill="#1f77b4"/>
+<text x="250" y="228" text-anchor="end">GPIO 8 (SDA)</text>
+<polyline points="260,224 450,224 450,172 600,172" fill="none" stroke="#1f77b4" stroke-width="3"/>
+<circle cx="600" cy="172" r="5" fill="#1f77b4"/>
+<text x="612" y="176" fill="#fff">SDA</text>
+<circle cx="260" cy="262" r="5" fill="#d62728"/>
+<text x="250" y="266" text-anchor="end">3V3</text>
+<polyline points="260,262 490,262 490,295 600,295" fill="none" stroke="#d62728" stroke-width="3"/>
+<circle cx="600" cy="295" r="5" fill="#d62728"/>
+<text x="612" y="299" fill="#000">VCC</text>
+<circle cx="260" cy="300" r="5" fill="#111111"/>
+<text x="250" y="304" text-anchor="end">GND</text>
+<polyline points="260,300 530,300 530,319 600,319" fill="none" stroke="#111111" stroke-width="3"/>
+<circle cx="600" cy="319" r="5" fill="#111111"/>
+<text x="612" y="323" fill="#000">GND</text>
+<circle cx="260" cy="338" r="5" fill="#2ca02c"/>
+<text x="250" y="342" text-anchor="end">GPIO 4</text>
+<polyline points="260,338 570,338 570,343 600,343" fill="none" stroke="#2ca02c" stroke-width="3"/>
+<circle cx="600" cy="343" r="5" fill="#2ca02c"/>
+<text x="612" y="347" fill="#000">OUT</text>
+<text x="30" y="395">Power BOTH modules from 3V3: ESP32 GPIOs are not 5 V tolerant.</text>
+<text x="30" y="415">SDA/SCL = board-core defaults (GPIO 8/9); change with DumirrorRobo(sda, scl).</text>
+<text x="30" y="435">All grounds must be common. Verify your module's pin order (silkscreen) before powering.</text>
+</svg>

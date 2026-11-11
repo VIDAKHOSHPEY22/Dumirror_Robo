@@ -1,0 +1,139 @@
+/**
+ * @file faces.def
+ * @brief X-Macro registry of all robot faces.
+ *
+ * TO ADD A NEW FACE:
+ *   1. Create src/faces/face_xxx.h with:
+ *        const uint8_t FACE_XXX[] PROGMEM = { ... 1024 bytes ... };
+ *   2. Add its #include in src/Dumirror_Robo.cpp
+ *   3. Add ONE line below:
+ *        X(FACE_XXX, FACE_XXX_ID, "xxx")
+ *   4. Done. Enum, table, count, and API update automatically.
+ *
+ * TO ADD A NEW ANIMATION:
+ *   1. Create src/faces/anim_xxx.h defining FACE_XXX_1..N, FACE_XXX_ANIM[],
+ *      FACE_XXX_FRAMES and FACE_XXX_LOOP (see anim_blink.h).
+ *   2. Add its #include in src/Dumirror_Robo.cpp
+ *   3. Add ONE X_ANIM() line in the animated section below.
+ *
+ * Each line is wrapped in #if DUMIRROR_ENABLE_FACE_<NAME> so profiles in
+ * Dumirror_Config.h can drop faces. New faces should add the same guard
+ * (and a matching default in Dumirror_Config.h).
+ *
+ * Order of X() lines defines enum values AND the auto-cycle order.
+ * Static faces come first, animated faces follow.
+ */
+
+// A pass may define only X() (static faces) or only X_ANIM() (animations);
+// the other macro defaults to "expands to nothing".
+#include "Dumirror_Config.h"
+
+#ifndef X
+#define X(bitmap, enumId, name)
+#define DUMIRROR_X_DEFAULTED
+#endif
+#ifndef X_ANIM
+#define X_ANIM(tag, enumId, name, animArray, frameCount, loops)
+#define DUMIRROR_X_ANIM_DEFAULTED
+#endif
+
+//        BITMAP_ARRAY   ENUM_ID           STRING_NAME
+#if DUMIRROR_ENABLE_FACE_NORMAL
+X(          FACE_NORMAL,   FACE_NORMAL_ID,   "normal")
+#endif
+#if DUMIRROR_ENABLE_FACE_POOKER
+X(          FACE_POOKER,   FACE_POOKER_ID,   "pooker")
+#endif
+#if DUMIRROR_ENABLE_FACE_LOVE
+X(          FACE_LOVE,     FACE_LOVE_ID,     "love")
+#endif
+#if DUMIRROR_ENABLE_FACE_TOUCH
+X(          FACE_TOUCH,    FACE_TOUCH_ID,    "touch")
+#endif
+#if DUMIRROR_ENABLE_FACE_CRY
+X(          FACE_CRY,      FACE_CRY_ID,      "cry")
+#endif
+#if DUMIRROR_ENABLE_FACE_DIZZY
+X(          FACE_DIZZY,    FACE_DIZZY_ID,    "dizzy")
+#endif
+#if DUMIRROR_ENABLE_FACE_KISS
+X(          FACE_KISS,     FACE_KISS_ID,     "kiss")
+#endif
+#if DUMIRROR_ENABLE_FACE_WARM
+X(          FACE_WARM,     FACE_WARM_ID,     "warm")
+#endif
+#if DUMIRROR_ENABLE_FACE_HOT
+X(          FACE_HOT,      FACE_HOT_ID,      "hot")
+#endif
+#if DUMIRROR_ENABLE_FACE_CHILLY
+X(          FACE_CHILLY,   FACE_CHILLY_ID,   "chilly")
+#endif
+#if DUMIRROR_ENABLE_FACE_COLD
+X(          FACE_COLD,     FACE_COLD_ID,     "cold")
+#endif
+#if DUMIRROR_ENABLE_FACE_ANGRY
+X(          FACE_ANGRY,    FACE_ANGRY_ID,    "angry")
+#endif
+#if DUMIRROR_ENABLE_FACE_HUH
+X(          FACE_HUH,      FACE_HUH_ID,      "huh")
+#endif
+#if DUMIRROR_ENABLE_FACE_LAUGH
+X(          FACE_LAUGH,    FACE_LAUGH_ID,    "laugh")
+#endif
+#if DUMIRROR_ENABLE_FACE_SLEEPY
+X(          FACE_SLEEPY,   FACE_SLEEPY_ID,   "sleepy")
+#endif
+#if DUMIRROR_ENABLE_FACE_DEAD
+X(          FACE_DEAD,     FACE_DEAD_ID,     "dead")
+#endif
+#if DUMIRROR_ENABLE_FACE_WINK
+X(          FACE_WINK,     FACE_WINK_ID,     "wink")
+#endif
+#if DUMIRROR_ENABLE_FACE_LOL
+X(          FACE_LOL,      FACE_LOL_ID,      "lol")
+#endif
+#if DUMIRROR_ENABLE_FACE_SAD
+X(          FACE_SAD,      FACE_SAD_ID,      "sad")
+#endif
+
+// ===== Animated faces (frame sequences) =====
+//          TAG            ENUM_ID            STRING_NAME   ANIM_ARRAY         FRAMES  LOOP
+#if DUMIRROR_ENABLE_FACE_SNEEZE
+X_ANIM(     FACE_SNEEZE,   FACE_SNEEZE_ID,    "sneeze",     FACE_SNEEZE_ANIM,  6,      false)
+#endif
+#if DUMIRROR_ENABLE_FACE_BLINK
+X_ANIM(     FACE_BLINK,    FACE_BLINK_ID,     "blink",      FACE_BLINK_ANIM,   2,      true)
+#endif
+#if DUMIRROR_ENABLE_FACE_LOOK_LEFT
+X_ANIM(     FACE_LOOK_LEFT,  FACE_LOOK_LEFT_ID,  "look_left",  FACE_LOOK_LEFT_ANIM,  3, false)
+#endif
+#if DUMIRROR_ENABLE_FACE_LOOK_RIGHT
+X_ANIM(     FACE_LOOK_RIGHT, FACE_LOOK_RIGHT_ID, "look_right", FACE_LOOK_RIGHT_ANIM, 3, false)
+#endif
+#if DUMIRROR_ENABLE_FACE_SMILE_BIG
+X_ANIM(     FACE_SMILE_BIG,  FACE_SMILE_BIG_ID,  "smile_big",  FACE_SMILE_BIG_ANIM,  3, false)
+#endif
+#if DUMIRROR_ENABLE_FACE_HEARTBEAT
+X_ANIM(     FACE_HEARTBEAT,  FACE_HEARTBEAT_ID,  "heartbeat",  FACE_HEARTBEAT_ANIM,  2, true)
+#endif
+#if DUMIRROR_ENABLE_FACE_SLEEP_BREATH
+X_ANIM(     FACE_SLEEP_BREATH, FACE_SLEEP_BREATH_ID, "sleep_breath", FACE_SLEEP_BREATH_ANIM, 2, true)
+#endif
+#if DUMIRROR_ENABLE_FACE_WAKE_UP
+X_ANIM(     FACE_WAKE_UP,    FACE_WAKE_UP_ID,    "wake_up",    FACE_WAKE_UP_ANIM,    4, false)
+#endif
+#if DUMIRROR_ENABLE_FACE_HICCUP
+X_ANIM(     FACE_HICCUP,     FACE_HICCUP_ID,     "hiccup",     FACE_HICCUP_ANIM,     3, false)
+#endif
+#if DUMIRROR_ENABLE_FACE_CHEW
+X_ANIM(     FACE_CHEW,       FACE_CHEW_ID,       "chew",       FACE_CHEW_ANIM,       3, true)
+#endif
+
+#ifdef DUMIRROR_X_DEFAULTED
+#undef X
+#undef DUMIRROR_X_DEFAULTED
+#endif
+#ifdef DUMIRROR_X_ANIM_DEFAULTED
+#undef X_ANIM
+#undef DUMIRROR_X_ANIM_DEFAULTED
+#endif

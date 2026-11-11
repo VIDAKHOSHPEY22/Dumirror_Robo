@@ -1,0 +1,33 @@
+{
+    "configurations": [
+        {
+            "name": "esp32:esp32:makergo_c3_supermini",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "C:\\Users\\saya",
+                "system\\AppData\\Local\\Arduino15\\packages\\esp32\\tools\\esp-rv32\\2601\\riscv32-esp-elf\\include"
+            ],
+            "forcedInclude": [],
+            "defines": [
+                "F_CPU=160000000L",
+                "ARDUINO=10607",
+                "ARDUINO_MAKERGO_C3_SUPERMINI",
+                "ARDUINO_ARCH_ESP32",
+                "ARDUINO_BOARD=\"MAKERGO_C3_SUPERMINI\"",
+                "ARDUINO_VARIANT=\"makergo_c3_supermini\"",
+                "ARDUINO_PARTITION_default",
+                "ARDUINO_HOST_OS=\"windows\"",
+                "ARDUINO_FQBN=\"esp32:esp32:makergo_c3_supermini\"",
+                "ESP32=ESP32",
+                "CORE_DEBUG_LEVEL=0",
+                "ARDUINO_USB_MODE=1",
+                "ARDUINO_USB_CDC_ON_BOOT=1"
+            ],
+            "compilerPath": "system\\AppData\\Local\\Arduino15\\packages\\esp32\\tools\\esp-rv32\\2601/bin/riscv32-esp-elf-g++",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "gcc-x64"
+        }
+    ],
+    "version": 4
+}
