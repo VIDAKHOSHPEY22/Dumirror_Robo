@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,14 +6,50 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0b0912">
 
-  <title>Dumirror_Robo — Robot Face & Animation Gallery</title>
+  <title>Dumirror_Robo Robot Face & Animation Gallery</title>
 
-  <meta name="description" content="Explore 19 expressive robot faces and 10 animations from Dumirror_Robo, an open-source Arduino library for SSD1306 128×64 OLED displays.">
+  <meta
+    name="description"
+    content="Explore 19 expressive robot faces and 10 animations from Dumirror_Robo, an open-source Arduino library for SSD1306 128×64 OLED displays."
+  >
 
+  <!-- Favicon -->
+  <link
+    rel="icon"
+    type="image/png"
+    href="images/oled-128x64-blink-1.png"
+  >
+  <link
+    rel="apple-touch-icon"
+    href="images/oled-128x64-blink-1.png"
+  >
+
+  <!-- Open Graph -->
   <meta property="og:title" content="Dumirror_Robo — Robot Face & Animation Gallery">
-  <meta property="og:description" content="An open-source Arduino library featuring 19 static expressions and 10 animations for SSD1306 OLED displays.">
+  <meta
+    property="og:description"
+    content="An open-source Arduino library featuring 19 static expressions and 10 animations for SSD1306 OLED displays."
+  >
   <meta property="og:type" content="website">
-  <meta property="og:image" content="https://raw.githubusercontent.com/VIDAKHOSHPEY22/Dumirror_Robo/main/images/animations/sneeze.gif">
+  <meta
+    property="og:url"
+    content="https://VIDAKHOSHPEY22.github.io/Dumirror_Robo/"
+  >
+  <meta
+    property="og:image"
+    content="https://raw.githubusercontent.com/VIDAKHOSHPEY22/Dumirror_Robo/main/images/animations/sneeze.gif"
+  >
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Dumirror_Robo — Robot Face & Animation Gallery">
+  <meta
+    name="twitter:description"
+    content="Explore 19 robot expressions and 10 animations for SSD1306 OLED displays."
+  >
+  <meta
+    name="twitter:image"
+    content="https://raw.githubusercontent.com/VIDAKHOSHPEY22/Dumirror_Robo/main/images/animations/sneeze.gif"
+  >
 
   <style>
     :root {
@@ -586,27 +623,39 @@
     </p>
 
     <div class="links">
-      <a class="link-button primary"
-         href="https://github.com/VIDAKHOSHPEY22/Dumirror_Robo/releases/latest"
-         target="_blank" rel="noopener">
+      <a
+        class="link-button primary"
+        href="https://github.com/VIDAKHOSHPEY22/Dumirror_Robo/releases/latest"
+        target="_blank"
+        rel="noopener"
+      >
         Download Latest Release
       </a>
 
-      <a class="link-button"
-         href="https://github.com/VIDAKHOSHPEY22/Dumirror_Robo"
-         target="_blank" rel="noopener">
+      <a
+        class="link-button"
+        href="https://github.com/VIDAKHOSHPEY22/Dumirror_Robo"
+        target="_blank"
+        rel="noopener"
+      >
         GitHub Repository
       </a>
 
-      <a class="link-button"
-         href="https://github.com/VIDAKHOSHPEY22/Dumirror_Robo#readme"
-         target="_blank" rel="noopener">
+      <a
+        class="link-button"
+        href="https://github.com/VIDAKHOSHPEY22/Dumirror_Robo#readme"
+        target="_blank"
+        rel="noopener"
+      >
         Documentation
       </a>
 
-      <a class="link-button"
-         href="https://youtu.be/25PJctTHJlc"
-         target="_blank" rel="noopener">
+      <a
+        class="link-button"
+        href="https://youtu.be/25PJctTHJlc"
+        target="_blank"
+        rel="noopener"
+      >
         Setup Tutorial
       </a>
     </div>
@@ -637,7 +686,8 @@
         <img
           src="images/animations/sneeze.gif"
           alt="Dumirror robot sneeze animation"
-          fetchpriority="high">
+          fetchpriority="high"
+        >
       </div>
     </section>
 
@@ -673,9 +723,15 @@
 
       <div class="controls">
         <div class="tabs" role="group" aria-label="Gallery filter">
-          <button class="tab active" data-filter="all">All</button>
-          <button class="tab" data-filter="animation">Animations</button>
-          <button class="tab" data-filter="face">Faces</button>
+          <button class="tab active" data-filter="all" aria-pressed="true">
+            All
+          </button>
+          <button class="tab" data-filter="animation" aria-pressed="false">
+            Animations
+          </button>
+          <button class="tab" data-filter="face" aria-pressed="false">
+            Faces
+          </button>
         </div>
 
         <input
@@ -683,7 +739,8 @@
           id="search"
           type="search"
           placeholder="Search faces and animations..."
-          aria-label="Search gallery">
+          aria-label="Search gallery"
+        >
       </div>
 
       <div class="grid" id="grid" aria-live="polite">
@@ -695,11 +752,23 @@
 
   <!-- Image Preview Modal -->
 
-  <div class="modal" id="modal" role="dialog"
-       aria-modal="true" aria-label="Image preview">
+  <div
+    class="modal"
+    id="modal"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Image preview"
+    aria-hidden="true"
+  >
     <div class="modal-content">
-      <button class="close" id="closeModal"
-              aria-label="Close preview">×</button>
+      <button
+        class="close"
+        id="closeModal"
+        aria-label="Close preview"
+        type="button"
+      >
+        ×
+      </button>
 
       <img id="modalImage" src="" alt="">
       <p class="modal-title" id="modalTitle"></p>
@@ -783,6 +852,7 @@
       const closeModal = document.getElementById("closeModal");
 
       let currentFilter = "all";
+      let previouslyFocusedElement = null;
 
       const items = [
         ...animations.map(name => ({
@@ -836,7 +906,10 @@
           const safeCode = escapeHTML(item.code);
 
           return `
-            <article class="card" style="animation-delay:${Math.min(index * 25, 300)}ms">
+            <article
+              class="card"
+              style="animation-delay:${Math.min(index * 25, 300)}ms"
+            >
               <div
                 class="preview"
                 data-preview="${safeImage}"
@@ -859,7 +932,9 @@
               </div>
 
               <div class="card-info">
-                <h3 class="card-name">${safeName.replaceAll("_", " ")}</h3>
+                <h3 class="card-name">
+                  ${safeName.replaceAll("_", " ")}
+                </h3>
 
                 <code class="card-code">${safeCode}</code>
 
@@ -877,23 +952,45 @@
       }
 
       function openPreview(src, name) {
+        previouslyFocusedElement = document.activeElement;
+
         modalImage.src = src;
         modalImage.alt = name;
         modalTitle.textContent = name.replaceAll("_", " ");
+
         modal.classList.add("open");
+        modal.setAttribute("aria-hidden", "false");
+
         closeModal.focus();
       }
 
       function hidePreview() {
+        if (!modal.classList.contains("open")) {
+          return;
+        }
+
         modal.classList.remove("open");
+        modal.setAttribute("aria-hidden", "true");
+
         modalImage.src = "";
+        modalImage.alt = "";
+
+        if (previouslyFocusedElement) {
+          previouslyFocusedElement.focus();
+          previouslyFocusedElement = null;
+        }
       }
 
       tabs.forEach(tab => {
         tab.addEventListener("click", () => {
-          tabs.forEach(button => button.classList.remove("active"));
+          tabs.forEach(button => {
+            button.classList.remove("active");
+            button.setAttribute("aria-pressed", "false");
+          });
 
           tab.classList.add("active");
+          tab.setAttribute("aria-pressed", "true");
+
           currentFilter = tab.dataset.filter;
 
           render();
