@@ -7,10 +7,10 @@
 
   <title>Dumirror_Robo — Robot Face & Animation Gallery</title>
 
-  <meta name="description" content="Explore all 19 expressive robot faces and 10 animated GIFs from Dumirror_Robo, an open-source SSD1306 OLED robot face library.">
+  <meta name="description" content="Explore 19 expressive robot faces and 10 animations from Dumirror_Robo, an open-source Arduino library for SSD1306 128×64 OLED displays.">
 
-  <meta property="og:title" content="Dumirror_Robo — Face & Animation Gallery">
-  <meta property="og:description" content="19 expressive faces. 10 animations. One little robot.">
+  <meta property="og:title" content="Dumirror_Robo — Robot Face & Animation Gallery">
+  <meta property="og:description" content="An open-source Arduino library featuring 19 static expressions and 10 animations for SSD1306 OLED displays.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://raw.githubusercontent.com/VIDAKHOSHPEY22/Dumirror_Robo/main/images/animations/sneeze.gif">
 
@@ -68,16 +68,19 @@
       text-align: center;
     }
 
-    .brand-icon {
-      width: 64px;
-      height: 64px;
-      margin: 0 auto 18px;
+    .brand-mark {
+      width: 58px;
+      height: 58px;
+      margin: 0 auto 20px;
       display: grid;
       place-items: center;
       border: 1px solid #55417d;
-      border-radius: 20px;
+      border-radius: 17px;
       background: linear-gradient(145deg, #251b3d, #151020);
-      font-size: 34px;
+      color: var(--purple);
+      font-size: 1.15rem;
+      font-weight: 800;
+      letter-spacing: -1px;
       box-shadow: 0 0 45px #8b5cf629;
     }
 
@@ -93,8 +96,8 @@
     }
 
     .subtitle {
-      max-width: 620px;
-      margin: 12px auto 24px;
+      max-width: 650px;
+      margin: 12px auto 25px;
       color: var(--muted);
       font-size: 1rem;
     }
@@ -107,12 +110,15 @@
     }
 
     .link-button {
-      padding: 9px 17px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 17px;
       border: 1px solid var(--border);
       border-radius: 999px;
       background: #171321;
       color: #ddd2ff;
-      font-size: .9rem;
+      font-size: .88rem;
       transition: .2s ease;
     }
 
@@ -122,7 +128,19 @@
       transform: translateY(-2px);
     }
 
-    /* Hero animation */
+    .link-button.primary {
+      border-color: var(--purple-bright);
+      background: var(--purple-bright);
+      color: white;
+      font-weight: 750;
+    }
+
+    .link-button.primary:hover {
+      border-color: #a78bfa;
+      background: #7c3aed;
+    }
+
+    /* Featured animation */
 
     .hero {
       margin: 25px auto 55px;
@@ -557,33 +575,39 @@
 <body>
 
   <header class="container">
-    <div class="brand-icon">🤖</div>
+    <div class="brand-mark" aria-hidden="true">DR</div>
 
     <h1>Dumirror<span>_Robo</span></h1>
 
     <p class="subtitle">
-      A little robot with a lot of expressions.
-      Explore every face and animation in the open-source
-      SSD1306 OLED robot face library.
+      An open-source Arduino library for expressive DIY companion robots.
+      Explore 19 static faces and 10 frame-based animations
+      designed for SSD1306 128×64 OLED displays.
     </p>
 
     <div class="links">
+      <a class="link-button primary"
+         href="https://github.com/VIDAKHOSHPEY22/Dumirror_Robo/releases/latest"
+         target="_blank" rel="noopener">
+        Download Latest Release
+      </a>
+
       <a class="link-button"
          href="https://github.com/VIDAKHOSHPEY22/Dumirror_Robo"
          target="_blank" rel="noopener">
-        GitHub Repository ↗
+        GitHub Repository
       </a>
 
       <a class="link-button"
          href="https://github.com/VIDAKHOSHPEY22/Dumirror_Robo#readme"
          target="_blank" rel="noopener">
-        Documentation ↗
+        Documentation
       </a>
 
       <a class="link-button"
          href="https://youtu.be/25PJctTHJlc"
          target="_blank" rel="noopener">
-        Watch Demo ↗
+        Setup Tutorial
       </a>
     </div>
   </header>
@@ -596,13 +620,12 @@
       <div class="hero-content">
         <span class="eyebrow">Featured Animation</span>
 
-        <h2>ACHOO! 💨</h2>
+        <h2>Sneeze</h2>
 
         <p>
-          Meet the little robot that can sneeze, blink,
-          smile, look around and express itself.
-          This is one of the animated sequences
-          included in Dumirror_Robo.
+          A frame-based animation from the Dumirror_Robo library.
+          Explore the complete collection of expressions and animations
+          available for your OLED robot projects.
         </p>
 
         <code class="hero-code">
@@ -644,7 +667,7 @@
         <div>
           <span class="eyebrow">Explore the Library</span>
           <h2>Robot Gallery</h2>
-          <p>Every expression has its own personality.</p>
+          <p>Browse all available expressions and animations.</p>
         </div>
       </div>
 
@@ -685,7 +708,7 @@
 
   <footer>
     <p>
-      Made with ♡ by the
+      Made with care by the
       <a href="https://github.com/VIDAKHOSHPEY22">
         Dumirror Team
       </a>
@@ -698,7 +721,15 @@
 
     <p>
       <a href="https://github.com/VIDAKHOSHPEY22/Dumirror_Robo">
-        github.com/VIDAKHOSHPEY22/Dumirror_Robo
+        GitHub Repository
+      </a>
+      ·
+      <a href="https://github.com/VIDAKHOSHPEY22/Dumirror_Robo/releases/latest">
+        Latest Release
+      </a>
+      ·
+      <a href="https://VIDAKHOSHPEY22.github.io/Dumirror_Robo/">
+        Live Gallery
       </a>
     </p>
   </footer>
@@ -706,9 +737,6 @@
   <script>
     (() => {
       "use strict";
-
-      const RAW =
-        "https://raw.githubusercontent.com/VIDAKHOSHPEY22/Dumirror_Robo/main/";
 
       const faces = [
         "angry",
@@ -884,7 +912,7 @@
             );
 
             const original = copyButton.textContent;
-            copyButton.textContent = "Copied!";
+            copyButton.textContent = "Copied";
 
             setTimeout(() => {
               copyButton.textContent = original;

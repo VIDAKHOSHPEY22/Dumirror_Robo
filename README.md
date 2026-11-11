@@ -1,6 +1,12 @@
 # 🤖 Dumirror_Robo
 
 <p align="center">
+  <a href="https://github.com/VIDAKHOSHPEY22/Dumirror_Robo/releases/download/v1.1.0/Dumirror_Robo-1.1.0.zip">
+    <img src="https://img.shields.io/badge/⬇%20Download-Dumirror_Robo%20v1.1.0-8B5CF6?style=for-the-badge" alt="Download Dumirror_Robo v1.1.0"/>
+  </a>
+</p>
+
+<p align="center">
   <b>An open-source animated robot face library for SSD1306 128×64 OLED displays.</b>
   <br>
   Create expressive DIY companion robots with Arduino and compatible microcontrollers.
@@ -28,6 +34,20 @@
   <img src="https://img.shields.io/badge/animations-10-EC4899" alt="10 Animations"/>
   <img src="https://img.shields.io/badge/architectures-AVR%20%7C%20ESP32%20%7C%20ESP8266%20%7C%20RP2040-00979D" alt="Supported Architectures"/>
 </p>
+
+### Quick Download
+
+**[⬇ Download Dumirror_Robo v1.1.0 — ZIP](https://github.com/VIDAKHOSHPEY22/Dumirror_Robo/releases/download/v1.1.0/Dumirror_Robo-1.1.0.zip)**
+
+Download the library directly without cloning the repository. Install the ZIP through Arduino IDE or extract it into your Arduino libraries directory.
+
+**SHA-256 checksum**
+
+```text
+8341a0ec37d9391973736abcd651bf4d4ef7d74d2c4fa6c7f2f07913ae6e43ba
+```
+
+<sub>Verify the downloaded archive using its SHA-256 checksum. See <a href="https://github.com/VIDAKHOSHPEY22/Dumirror_Robo/releases">all releases</a> for other versions.</sub>
 
 ---
 
