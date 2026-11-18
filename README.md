@@ -1,3 +1,4 @@
+
 # 🤖 Dumirror_Robo
 
 <p align="center">
@@ -25,6 +26,9 @@
   <a href="https://youtu.be/25PJctTHJlc">
     <img src="https://img.shields.io/badge/YouTube-Watch%20the%20Tutorial-red?style=for-the-badge&logo=youtube" alt="YouTube Tutorial"/>
   </a>
+  <a href="https://youtube.com/shorts/KHJu6yjl5UQ">
+    <img src="https://img.shields.io/badge/YouTube-Watch%20Mochi%20in%20Action-red?style=for-the-badge&logo=youtube" alt="Watch Mochi in Action"/>
+  </a>
 </p>
 
 <p align="center">
@@ -50,6 +54,21 @@ Download the library directly without cloning the repository. Install the ZIP th
 <sub>Verify the downloaded archive using its SHA-256 checksum. See <a href="https://github.com/VIDAKHOSHPEY22/Dumirror_Robo/releases">all releases</a> for other versions.</sub>
 
 ---
+
+### 🎬 Watch Dumirror_Robo in Action
+
+<p align="center">
+  <a href="https://youtube.com/shorts/KHJu6yjl5UQ">
+    <img src="https://img.youtube.com/vi/KHJu6yjl5UQ/hqdefault.jpg" alt="Dumirror_Robo - Mochi short demonstration" width="480"/>
+  </a>
+  <br>
+  <b><a href="https://youtube.com/shorts/KHJu6yjl5UQ">▶ Watch Mochi — Short Demo</a></b>
+  <br>
+  <sub>See Dumirror_Robo running on a real DIY robot.</sub>
+</p>
+
+---
+
 
 ## 🎞️ Animation Gallery
 
