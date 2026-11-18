@@ -1,4 +1,3 @@
-
 <h1 align="center">🤖 Dumirror_Robo</h1>
 
 <p align="center">
@@ -7,18 +6,23 @@
 </p>
 
 <p align="center">
+  <a href="https://www.arduino.cc/reference/en/libraries/dumirror_robo/">
+    <img src="https://img.shields.io/badge/Arduino%20Library%20Manager-Available-00979D?style=for-the-badge&logo=arduino&logoColor=white" alt="Available in Arduino Library Manager"/>
+  </a>
   <a href="https://github.com/VIDAKHOSHPEY22/Dumirror_Robo/releases/download/v1.1.0/Dumirror_Robo-1.1.0.zip">
     <img src="https://img.shields.io/badge/⬇%20Download-v1.1.0-8B5CF6?style=for-the-badge" alt="Download v1.1.0"/>
   </a>
   <a href="https://VIDAKHOSHPEY22.github.io/Dumirror_Robo/">
     <img src="https://img.shields.io/badge/Live%20Gallery-Explore%20the%20Faces-8B5CF6?style=for-the-badge" alt="Live Gallery"/>
   </a>
+    <a href="https://youtube.com/shorts/KHJu6yjl5UQ">
+    <img src="https://img.shields.io/badge/YouTube-Watch%20Mochi%20in%20Action-red?style=for-the-badge&logo=youtube" alt="Watch Mochi in Action"/>
+  </a>
+  
   <a href="https://youtu.be/25PJctTHJlc">
     <img src="https://img.shields.io/badge/YouTube-Watch%20the%20Tutorial-red?style=for-the-badge&logo=youtube" alt="YouTube Tutorial"/>
   </a>
-  <a href="https://youtube.com/shorts/KHJu6yjl5UQ">
-    <img src="https://img.shields.io/badge/YouTube-Watch%20Mochi%20in%20Action-red?style=for-the-badge&logo=youtube" alt="Watch Mochi in Action"/>
-  </a>
+
   <a href="https://www.hackster.io/vviiddaa2/dumirror-robo-give-your-diy-robot-a-face-b99cd7">
     <img src="https://img.shields.io/badge/Hackster.io-Full%20Project-1E90FF?style=for-the-badge&logo=hackster" alt="Hackster.io Project"/>
   </a>
@@ -35,7 +39,7 @@
 
 ---
 
-<h3 align="center">🎬 Watch Dumirror_Robo in Action</h3>
+<h2 align="center">🎬 Watch Dumirror_Robo in Action</h2>
 
 <p align="center">
   <a href="https://youtube.com/shorts/KHJu6yjl5UQ">
@@ -59,38 +63,42 @@
 
 ---
 
-<h3 align="center">Download</h3>
+## 📚 Installation
 
-<p align="center">
-  <b><a href="https://github.com/VIDAKHOSHPEY22/Dumirror_Robo/releases/download/v1.1.0/Dumirror_Robo-1.1.0.zip">⬇ Download Dumirror_Robo v1.1.0 — ZIP</a></b>
-</p>
+**The fastest way to get started.**
 
-<p align="center">
-  Install the ZIP through Arduino IDE or extract it into your Arduino libraries directory.
-</p>
+<a href="https://www.arduino.cc/reference/en/libraries/dumirror_robo/">
+  <img src="https://img.shields.io/badge/Arduino%20Library%20Manager-Install%20Dumirror__Robo-00979D?style=for-the-badge&logo=arduino&logoColor=white" alt="Dumirror_Robo on Arduino Library Manager"/>
+</a>
 
-<p align="center"><b>SHA-256 checksum</b></p>
-
-<p align="center">
-  <code>8341a0ec37d9391973736abcd651bf4d4ef7d74d2c4fa6c7f2f07913ae6e43ba</code>
-</p>
-
-<p align="center">
-  <sub>Verify the archive using its SHA-256 checksum. See <a href="https://github.com/VIDAKHOSHPEY22/Dumirror_Robo/releases">all releases</a> for other versions.</sub>
-</p>
+Open Arduino IDE → **Sketch → Include Library → Manage Libraries…**  
+Search for `Dumirror_Robo` and click **Install**.
 
 ---
 
-<h3 align="center">Links</h3>
+<details>
+  <summary><b>📦 Manual installation (ZIP)</b></summary>
 
-<p align="center">
-  <a href="https://VIDAKHOSHPEY22.github.io/Dumirror_Robo/">Live Gallery</a> ·
-  <a href="https://youtu.be/25PJctTHJlc">YouTube Tutorial</a> ·
-  <a href="https://youtube.com/shorts/KHJu6yjl5UQ">Mochi Short Demo</a> ·
-  <a href="https://www.hackster.io/vviiddaa2/dumirror-robo-give-your-diy-robot-a-face-b99cd7">Hackster.io</a> ·
-  <a href="https://dev.to/vidakhoshpey22/dumirrorrobo-give-your-diy-robot-a-face-4ooc">Dev.to</a> ·
-  <a href="LICENSE">MIT License</a>
-</p>
+  <br>
+
+  <a href="https://github.com/VIDAKHOSHPEY22/Dumirror_Robo/releases/download/v1.1.0/Dumirror_Robo-1.1.0.zip">
+    <img src="https://img.shields.io/badge/Download-v1.1.0%20ZIP-8B5CF6?style=for-the-badge" alt="Download ZIP"/>
+  </a>
+
+  1. Download the ZIP archive.
+  2. In Arduino IDE, select **Sketch → Include Library → Add .ZIP Library…**
+  3. Choose the downloaded archive.
+
+  Alternatively, extract the archive into your Arduino `libraries` directory.
+
+  **SHA-256**
+
+  ```text
+  8341a0ec37d9391973736abcd651bf4d4ef7d74d2c4fa6c7f2f07913ae6e43ba
+  ```
+
+  [View all releases →](https://github.com/VIDAKHOSHPEY22/Dumirror_Robo/releases)
+</details>
 
 ---
 
@@ -961,16 +969,32 @@ See the [`LICENSE`](LICENSE) file for the complete license text.
 
 ---
 
-<p align="center">
-  <b>Made with ♡ by the Dumirror Team</b>
-  <br/>
-  <a href="https://github.com/VIDAKHOSHPEY22/Dumirror_Robo">GitHub Repository</a>
-  ·
-  <a href="https://VIDAKHOSHPEY22.github.io/Dumirror_Robo/">Live Gallery</a>
-  ·
-  <a href="https://youtu.be/25PJctTHJlc">YouTube Tutorial</a>
+## 🔗 Explore More
+
+<p>
+  <a href="https://www.arduino.cc/reference/en/libraries/dumirror_robo/">
+    <img src="https://img.shields.io/badge/📚%20Arduino%20Library-00979D?style=for-the-badge&logo=arduino&logoColor=white" alt="Arduino Library"/>
+  </a>
+  <a href="https://VIDAKHOSHPEY22.github.io/Dumirror_Robo/">
+    <img src="https://img.shields.io/badge/🎨%20Live%20Gallery-8B5CF6?style=for-the-badge" alt="Live Gallery"/>
+  </a>
+  <a href="LICENSE">
+    <img src="https://img.shields.io/badge/⚖️%20MIT%20License-blue?style=for-the-badge" alt="MIT License"/>
+  </a>
+  <a href="https://youtube.com/shorts/KHJu6yjl5UQ?si=UCTxdlIKvH-6HVmy">
+    <img src="https://img.shields.io/badge/🤖%20Mochi%20in%20Action-red?style=for-the-badge&logo=youtube&logoColor=white" alt="Mochi in Action"/>
+  </a>
+  <a href="https://www.hackster.io/vviiddaa2/dumirror-robo-give-your-diy-robot-a-face-b99cd7">
+    <img src="https://img.shields.io/badge/🛠️%20Hackster.io-1E90FF?style=for-the-badge&logo=hackster&logoColor=white" alt="Hackster.io"/>
+  </a>
+  <a href="https://dev.to/vidakhoshpey22/dumirrorrobo-give-your-diy-robot-a-face-4ooc">
+    <img src="https://img.shields.io/badge/✍️%20Dev.to-0A0A0A?style=for-the-badge&logo=devdotto&logoColor=white" alt="Dev.to"/>
+  </a>
 </p>
 
-<p align="center">
-  If you build something with Dumirror_Robo, consider starring the repository and sharing your project.
-</p>
+---
+
+**Made with ♡ by the Dumirror Team**  
+Built for curious makers and expressive little robots. 🤖
+
+If you build something with Dumirror_Robo, consider **⭐ starring the repository** and sharing your project
