@@ -1,25 +1,14 @@
-
-# 🤖 Dumirror_Robo
-
-<p align="center">
-  <a href="https://github.com/VIDAKHOSHPEY22/Dumirror_Robo/releases/download/v1.1.0/Dumirror_Robo-1.1.0.zip">
-    <img src="https://img.shields.io/badge/⬇%20Download-Dumirror_Robo%20v1.1.0-8B5CF6?style=for-the-badge" alt="Download Dumirror_Robo v1.1.0"/>
-  </a>
-</p>
+<h1 align="center">🤖 Dumirror_Robo</h1>
 
 <p align="center">
-  <b>An open-source animated robot face library for SSD1306 128×64 OLED displays.</b>
-  <br>
+  An open-source animated robot face library for SSD1306 128×64 OLED displays.<br>
   Create expressive DIY companion robots with Arduino and compatible microcontrollers.
 </p>
 
 <p align="center">
-  <img src="images/animations/sneeze.gif" alt="Dumirror_Robo sneeze animation" width="300"/>
-  <br>
-  <sub>Animated expressions, built frame by frame.</sub>
-</p>
-
-<p align="center">
+  <a href="https://github.com/VIDAKHOSHPEY22/Dumirror_Robo/releases/download/v1.1.0/Dumirror_Robo-1.1.0.zip">
+    <img src="https://img.shields.io/badge/⬇%20Download-v1.1.0-8B5CF6?style=for-the-badge" alt="Download v1.1.0"/>
+  </a>
   <a href="https://VIDAKHOSHPEY22.github.io/Dumirror_Robo/">
     <img src="https://img.shields.io/badge/Live%20Gallery-Explore%20the%20Faces-8B5CF6?style=for-the-badge" alt="Live Gallery"/>
   </a>
@@ -29,44 +18,74 @@
   <a href="https://youtube.com/shorts/KHJu6yjl5UQ">
     <img src="https://img.shields.io/badge/YouTube-Watch%20Mochi%20in%20Action-red?style=for-the-badge&logo=youtube" alt="Watch Mochi in Action"/>
   </a>
+  <a href="https://www.hackster.io/vviiddaa2/dumirror-robo-give-your-diy-robot-a-face-b99cd7">
+    <img src="https://img.shields.io/badge/Hackster.io-Full%20Project-1E90FF?style=for-the-badge&logo=hackster" alt="Hackster.io Project"/>
+  </a>
 </p>
 
 <p align="center">
-  <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="MIT License"/></a>
-  <img src="https://img.shields.io/badge/version-1.1.0-8B5CF6" alt="Version 1.1.0"/>
-  <img src="https://img.shields.io/badge/static%20faces-19-8B5CF6" alt="19 Static Faces"/>
-  <img src="https://img.shields.io/badge/animations-10-EC4899" alt="10 Animations"/>
-  <img src="https://img.shields.io/badge/architectures-AVR%20%7C%20ESP32%20%7C%20ESP8266%20%7C%20RP2040-00979D" alt="Supported Architectures"/>
+  <img src="images/animations/sneeze.gif" alt="Dumirror_Robo sneeze animation" width="280"/>
+  <br>
+  <sub>🤧 Achoo! Animated expressions, built frame by frame.</sub>
 </p>
-
-### Quick Download
-
-**[⬇ Download Dumirror_Robo v1.1.0 — ZIP](https://github.com/VIDAKHOSHPEY22/Dumirror_Robo/releases/download/v1.1.0/Dumirror_Robo-1.1.0.zip)**
-
-Download the library directly without cloning the repository. Install the ZIP through Arduino IDE or extract it into your Arduino libraries directory.
-
-**SHA-256 checksum**
-
-```text
-8341a0ec37d9391973736abcd651bf4d4ef7d74d2c4fa6c7f2f07913ae6e43ba
-```
-
-<sub>Verify the downloaded archive using its SHA-256 checksum. See <a href="https://github.com/VIDAKHOSHPEY22/Dumirror_Robo/releases">all releases</a> for other versions.</sub>
 
 ---
 
-### 🎬 Watch Dumirror_Robo in Action
+<h3 align="center">🎬 Watch Dumirror_Robo in Action</h3>
 
 <p align="center">
   <a href="https://youtube.com/shorts/KHJu6yjl5UQ">
-    <img src="https://img.youtube.com/vi/KHJu6yjl5UQ/hqdefault.jpg" alt="Dumirror_Robo - Mochi short demonstration" width="480"/>
+    <img src="https://img.youtube.com/vi/KHJu6yjl5UQ/hqdefault.jpg" alt="Mochi Short Demo" width="400"/>
   </a>
   <br>
   <b><a href="https://youtube.com/shorts/KHJu6yjl5UQ">▶ Watch Mochi — Short Demo</a></b>
   <br>
-  <sub>See Dumirror_Robo running on a real DIY robot.</sub>
+  <sub>See Dumirror_Robo running on a real DIY robot. 🥺🤖</sub>
 </p>
 
+<p align="center">
+  <a href="https://youtu.be/25PJctTHJlc">
+    <img src="https://img.youtube.com/vi/25PJctTHJlc/hqdefault.jpg" alt="Full Tutorial" width="400"/>
+  </a>
+  <br>
+  <b><a href="https://youtu.be/25PJctTHJlc">🎥 Watch the Full Tutorial</a></b>
+  <br>
+  <sub>Build it from scratch, step by step.</sub>
+</p>
+
+---
+
+<h3 align="center">Download</h3>
+
+<p align="center">
+  <b><a href="https://github.com/VIDAKHOSHPEY22/Dumirror_Robo/releases/download/v1.1.0/Dumirror_Robo-1.1.0.zip">⬇ Download Dumirror_Robo v1.1.0 — ZIP</a></b>
+</p>
+
+<p align="center">
+  Install the ZIP through Arduino IDE or extract it into your Arduino libraries directory.
+</p>
+
+<p align="center"><b>SHA-256 checksum</b></p>
+
+<p align="center">
+  <code>8341a0ec37d9391973736abcd651bf4d4ef7d74d2c4fa6c7f2f07913ae6e43ba</code>
+</p>
+
+<p align="center">
+  <sub>Verify the archive using its SHA-256 checksum. See <a href="https://github.com/VIDAKHOSHPEY22/Dumirror_Robo/releases">all releases</a> for other versions.</sub>
+</p>
+
+---
+
+<h3 align="center">Links</h3>
+
+<p align="center">
+  <a href="https://VIDAKHOSHPEY22.github.io/Dumirror_Robo/">Live Gallery</a> ·
+  <a href="https://youtu.be/25PJctTHJlc">YouTube Tutorial</a> ·
+  <a href="https://youtube.com/shorts/KHJu6yjl5UQ">Mochi Short Demo</a> ·
+  <a href="https://www.hackster.io/vviiddaa2/dumirror-robo-give-your-diy-robot-a-face-b99cd7">Hackster.io</a> ·
+  <a href="LICENSE">MIT License</a>
+</p>
 ---
 
 
