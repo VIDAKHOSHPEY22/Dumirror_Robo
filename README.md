@@ -1,8 +1,9 @@
+
 <h1 align="center">🤖 Dumirror_Robo</h1>
 
 <p align="center">
-  An open-source animated robot face library for SSD1306 128×64 OLED displays.<br>
-  Create expressive DIY companion robots with Arduino and compatible microcontrollers.
+  <b>An open-source animated robot face library for SSD1306 128×64 OLED displays.</b><br>
+  Build expressive DIY companion robots with Arduino and compatible microcontrollers.
 </p>
 
 <p align="center">
@@ -93,7 +94,6 @@
 
 ---
 
-
 ## 🎞️ Animation Gallery
 
 Ten frame-based animations bring your robot to life.
@@ -147,9 +147,7 @@ Ten frame-based animations bring your robot to life.
 
 *Durations are approximate and depend on the animation timing configuration and update frequency.*
 
-The GIF previews loop to make the animations easy to inspect. On the device, playback follows each animation's configured loop setting.
-
-A one-shot animation plays once, while a looping animation repeats until it is stopped or replaced.
+The GIF previews loop to make the animations easy to inspect. On the device, playback follows each animation's configured loop setting. A one-shot animation plays once, while a looping animation repeats until it is stopped or replaced.
 
 ---
 
@@ -220,9 +218,9 @@ Dumirror_Robo includes 19 built-in static facial expressions.
 
 ---
 
-## Contents
+## Table of Contents
 
-- [About](#about)
+- [Overview](#overview)
 - [Real Hardware Demo](#real-hardware-demo)
 - [Features](#features)
 - [Temperature Expressions](#temperature-expressions)
@@ -245,13 +243,13 @@ Dumirror_Robo includes 19 built-in static facial expressions.
 
 ---
 
-## About
+## Overview
 
 **Dumirror_Robo** is an open-source Arduino library that brings expressive animated faces to small DIY robots using SSD1306 128×64 OLED displays.
 
-It provides a collection of ready-to-use facial expressions and frame-based animations, allowing makers to build the visual personality of a robot without implementing every expression from scratch.
+It ships with a curated set of ready-to-use facial expressions and frame-based animations, so makers can give a robot a visual personality without building every expression from scratch.
 
-The library is designed for small microcontrollers and includes features such as:
+The library is designed for small microcontrollers and includes:
 
 - 19 built-in static facial expressions
 - 10 frame-based animations
@@ -262,7 +260,7 @@ The library is designed for small microcontrollers and includes features such as
 - Selectable face profiles for small AVR boards
 - Configurable I2C display pins and address
 
-Dumirror_Robo focuses on the visual layer of a companion robot. You can combine it with sensors, buttons, touch modules, sound systems, and other hardware to create your own interactive projects.
+Dumirror_Robo focuses on the visual layer of a companion robot. Combine it with sensors, buttons, touch modules, sound systems, and other hardware to build your own interactive projects.
 
 ### Minimal example
 
@@ -284,7 +282,7 @@ void loop() {
 
 ## Real Hardware Demo
 
-Dumirror_Robo can be used as the expression system of a physical DIY robot.
+Dumirror_Robo can serve as the expression system of a physical DIY robot.
 
 <p align="center">
   <img
@@ -296,7 +294,6 @@ Dumirror_Robo can be used as the expression system of a physical DIY robot.
   <sub>A real hardware demonstration of Dumirror_Robo.</sub>
 </p>
 
-
 ---
 
 ## Features
@@ -305,8 +302,8 @@ Dumirror_Robo can be used as the expression system of a physical DIY robot.
 |---|---|
 | 19 Static Expressions | Built-in facial expressions for different moods and reactions |
 | 10 Animations | Frame-based animated expressions |
-| Non-blocking Playback | Animation updates without requiring the animation itself to block the main application |
-| Custom Animations | Support for creating and playing custom frame sequences |
+| Non-blocking Playback | Animation updates without blocking the main application |
+| Custom Animations | Create and play custom frame sequences |
 | Text Rendering | Display text as part of your robot interface |
 | PROGMEM Storage | Flash-resident bitmap data on supported architectures |
 | Face Profiles | Selectable face profiles for small AVR boards |
@@ -322,7 +319,7 @@ Dumirror_Robo can be used as the expression system of a physical DIY robot.
 
 ## Temperature Expressions
 
-Five expressions can be used to represent temperature conditions.
+Five expressions can represent temperature conditions.
 
 <p align="center">
   <img src="images/oled-128x64-cold.png" alt="Cold" width="130"/>
@@ -336,7 +333,7 @@ Five expressions can be used to represent temperature conditions.
   <b>cold → chilly → normal → warm → hot</b>
 </p>
 
-These expressions can be used with temperature sensors such as DHT11, DHT22, or BME280.
+These expressions work well with temperature sensors such as DHT11, DHT22, or BME280.
 
 ### Example
 
@@ -584,8 +581,6 @@ void loop() {
 
 For interactive projects, animation updates should run regularly without preventing other application tasks from executing.
 
-For example:
-
 ```cpp
 void loop() {
     robo.updateAnimation();
@@ -638,7 +633,7 @@ Custom animation, text rendering, and face profile interfaces should be used acc
 
 Dumirror_Robo uses a centralized registry to organize its facial expressions.
 
-A typical workflow for adding a static face is:
+A typical workflow for adding a static face:
 
 ### 1. Create the bitmap
 
