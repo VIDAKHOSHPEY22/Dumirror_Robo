@@ -21,10 +21,13 @@
   <a href="https://www.hackster.io/vviiddaa2/dumirror-robo-give-your-diy-robot-a-face-b99cd7">
     <img src="https://img.shields.io/badge/Hackster.io-Full%20Project-1E90FF?style=for-the-badge&logo=hackster" alt="Hackster.io Project"/>
   </a>
+  <a href="https://dev.to/vidakhoshpey22/dumirrorrobo-give-your-diy-robot-a-face-4ooc">
+    <img src="https://img.shields.io/badge/Dev.to-Read%20the%20Post-0A0A0A?style=for-the-badge&logo=devdotto" alt="Dev.to Post"/>
+  </a>
 </p>
 
 <p align="center">
-  <img src="images/animations/sneeze.gif" alt="Dumirror_Robo sneeze animation" width="280"/>
+  <img src="images/animations/sneeze.gif" alt="Dumirror_Robo sneeze animation" width="480"/>
   <br>
   <sub>🤧 Achoo! Animated expressions, built frame by frame.</sub>
 </p>
@@ -35,7 +38,7 @@
 
 <p align="center">
   <a href="https://youtube.com/shorts/KHJu6yjl5UQ">
-    <img src="https://img.youtube.com/vi/KHJu6yjl5UQ/hqdefault.jpg" alt="Mochi Short Demo" width="400"/>
+    <img src="https://img.youtube.com/vi/KHJu6yjl5UQ/maxresdefault.jpg" alt="Mochi Short Demo" width="640"/>
   </a>
   <br>
   <b><a href="https://youtube.com/shorts/KHJu6yjl5UQ">▶ Watch Mochi — Short Demo</a></b>
@@ -45,7 +48,7 @@
 
 <p align="center">
   <a href="https://youtu.be/25PJctTHJlc">
-    <img src="https://img.youtube.com/vi/25PJctTHJlc/hqdefault.jpg" alt="Full Tutorial" width="400"/>
+    <img src="https://img.youtube.com/vi/25PJctTHJlc/maxresdefault.jpg" alt="Full Tutorial" width="640"/>
   </a>
   <br>
   <b><a href="https://youtu.be/25PJctTHJlc">🎥 Watch the Full Tutorial</a></b>
@@ -84,8 +87,10 @@
   <a href="https://youtu.be/25PJctTHJlc">YouTube Tutorial</a> ·
   <a href="https://youtube.com/shorts/KHJu6yjl5UQ">Mochi Short Demo</a> ·
   <a href="https://www.hackster.io/vviiddaa2/dumirror-robo-give-your-diy-robot-a-face-b99cd7">Hackster.io</a> ·
+  <a href="https://dev.to/vidakhoshpey22/dumirrorrobo-give-your-diy-robot-a-face-4ooc">Dev.to</a> ·
   <a href="LICENSE">MIT License</a>
 </p>
+
 ---
 
 
@@ -291,21 +296,6 @@ Dumirror_Robo can be used as the expression system of a physical DIY robot.
   <sub>A real hardware demonstration of Dumirror_Robo.</sub>
 </p>
 
-### Watch the setup tutorial
-
-<p align="center">
-  <a href="https://youtu.be/25PJctTHJlc">
-    <img
-      src="https://img.youtube.com/vi/25PJctTHJlc/hqdefault.jpg"
-      alt="Dumirror_Robo Arduino and ESP32 setup tutorial"
-      width="480"
-    />
-  </a>
-  <br/>
-  <b><a href="https://youtu.be/25PJctTHJlc">▶ Watch the YouTube Tutorial</a></b>
-  <br/>
-  <sub>Arduino IDE · Library installation · Board configuration · ESP32 setup</sub>
-</p>
 
 ---
 
